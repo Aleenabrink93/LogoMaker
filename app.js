@@ -2,7 +2,6 @@ const inquirer = require("inquirer");
 const { Circle, Square, Triangle } = require("./lib/shape");
 const Svg = require("./lib/svg");
 var fs = require('fs');
-
 inquirer
   .prompt([
     {
@@ -43,9 +42,8 @@ inquirer
         createdShape = new Square();
         break;
     }
-
+  
     createdShape.setColor(shapeColor);
-
     const createdSVG = new Svg()
     createdSVG.setText(text,textColor);
     createdSVG.setShape(createdShape)
